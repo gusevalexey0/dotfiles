@@ -1,0 +1,51 @@
+set relativenumber
+set number
+
+set scrolloff=3
+" https://youtrack.jetbrains.com/issue/VIM-959
+set ideamarks
+
+" https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-examples
+set ideajoin
+
+" https://youtrack.jetbrains.com/issue/VIM-1521
+set commentary
+
+" https://github.com/JetBrains/ideavim/wiki/Select-mode
+" set selectmode-=template
+
+"  Mouseless Driven Development by Hadi Hariri https://www.youtube.com/watch?v=UH6YVv9js3s 
+" https://github.com/JetBrains/ideavim
+" https://github.com/Valloric/dotfiles/blob/master/intellij/ideavimrc
+" https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf
+set surround
+let mapleader = " "
+
+
+map <Leader>r :action RenameElement<CR>
+map <Leader>s :action FileStructurePopup<CR>
+map gi :action GotoImplementation<CR>
+map gd :action GotoDeclaration<CR>
+map <Leader>f :action FindUsages<CR>
+map <Leader>g :action Generate<CR>
+map gf :action GotoFile<cr>
+map gc :action GotoClass<cr>
+
+nmap == :action ReformatCode<cr>
+
+nmap <leader>wd :action Unsplit<CR>
+nmap <leader>wm :action UnsplitAll<CR>
+nmap <leader>wv :action SplitVertically<CR>
+nmap <leader>wh :action SplitHorizontally<CR>
+
+nmap ,r :action Refactorings.QuickListPopupAction<CR>
+
+nmap <leader><leader> :action GotoAction<CR>
+
+nmap <C-h> <c-w>h
+nmap <C-l> <c-w>l
+nmap <C-k> <c-w>k
+nmap <C-j> <c-w>j
+
+imap ,. <Esc>
+vmap ,. <Esc>
